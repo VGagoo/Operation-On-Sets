@@ -1,6 +1,6 @@
 # Operation-On-Sets
 This project is a web-based application that performs various operations on sets. It is implemented using HTML, CSS, and PHP. The purpose of this project is to provide a user-friendly interface for performing operations such as union, intersection, and difference on sets.
-# The four basic operations on sets are :
+# The Four Basic Operations On Sets are :
  1.Union of sets
  2.Intersection of sets
  3.Set Diference
