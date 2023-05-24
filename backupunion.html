@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Operation on sets</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+
+		
+		div.circle2 {
+			width: 280px;
+			height: 280px;
+			border-radius: 50%;
+			opacity: 0.7;
+			position: absolute;
+			z-index: 1;
+			background-color: #fff;
+			animation-name: anime2;
+			animation-duration: 1s;
+			animation-fill-mode: forwards;
+			animation-timing-function: ease-out;
+		}
+
+		div.circle1 {
+			width: 280px;
+			height: 280px;
+			border-radius: 50%;
+			opacity: 0.7;
+			position: absolute;
+			z-index: 1;
+			background-color: #fff;
+			animation-name: anime1;
+			animation-duration: 1s;
+			animation-fill-mode: forwards;
+			animation-timing-function: ease-out;
+		}
+		div.rectangle{
+			width: 400px;
+			height: 250px;
+			opacity: 0.7;
+			position: absolute;
+			z-index: 1;
+			background-color: #000;
+			animation-name: anime3;
+			animation-duration: 1s;
+			animation-fill-mode: forwards;
+			animation-timing-function: ease-out;
+		}
+		@keyframes anime2 {
+			from {top: 235px;right:00px;}
+			to {right:620px;top:230px;}
+		}
+		@keyframes anime1 {
+			from {top: 235px;left: 00px;}
+			to {left:560px;top:230px;}
+		}
+		@keyframes anime3 {
+			from {top: 390px;left: 610px;width: 0px;height: 0px;}
+			to {width: 500px;height: 340px;}
+		}
+
+		div.c1{
+			height: 200px;
+			width: 100px;
+			left: 460px;
+			top: 270px;
+			position: absolute;
+			z-index: 99;
+			font-size:20px ;
+			display: flex;
+			flex-flow: wrap;
+			justify-content: space-between;
+			align-items: flex-start;
+			flex-direction:column;
+			outline: 0px solid red ;
+
+		}
+
+
+		div.c2{
+			height: 200px;
+			width: 150px;
+			left: 680px;
+			top: 270px;
+			position: absolute;
+			z-index: 99;
+			font-size:20px ;
+			display: flex;
+			flex-flow: wrap;
+			justify-content: space-between;
+			align-items: flex-start;
+			flex-direction:column;
+			outline: 2px solid red ;
+
+		}
+		div.i
+		{
+			height: 160px;
+			width: 40px;
+			left: 593px;
+			top: 290px;
+			position: absolute;
+			z-index: 99;
+			font-size:20px ;
+			display: flex;
+			flex-flow: wrap;
+			justify-content: space-between;
+			align-items: flex-start;
+			flex-direction:column;
+			outline: 2px solid red;
+		}
+
+
+		p{
+			margin:0px;
+			padding: 0px;
+
+
+
+		}
+	</style>
+
+
+</head>
+<body>
+	<div class="headerbar">
+		<a class="headerbar" href="index.html">Introduction</a>|
+		<a class="headerbar" href="union.html" >Union</a>|
+		<a class="headerbar" href="intersection.html">Intersection</a>|
+		<a class="headerbar" href="Difference.html">Difference</a>|
+		<a class="headerbar" href="complement.html">Complement</a>|
+		<a class="headerbar" href="principle.html">Principle of Inclusion and Exclusion</a>
+	</div>	
+	<form>
+	<div class="mainarea">
+		<div class="container" style="justify-content:space-around;">
+			<div class="flexitem" >
+				A = <input type="text" name="set1" id="box1" placeholder="Separate elements by space">
+			</div>
+			<div class="flexitem">
+				B = <input type="text" name="set2" id="box2" placeholder="Separate elements by space">
+				<br>
+			</div>
+			<div class="flexitem" >
+				A U B = <input type="text" name="set2" id="box3" readonly>
+			</div>
+		</div>
+		<b style="position: absolute;top:210px;left:510px">A</b>
+		<b style="position: absolute;top:210px;left:700px">B</b>
+
+		<div class="rectangle" style="left:360px;top: 200px;"></div>	
+		<div class="circle1"></div>
+		<div class="circle2" style=""></div>
+		<div class="c1" id="c1" style="color:red;text-shadow: 4px 4px 4px grey;"></div>
+		<div class="c2"></div>
+		<div class="i"></div>
+		<input type="button" class="button" onclick="find()" name="compute" style="height: 45px;margin:15px" value="Compute Result">
+		<p>In the venn diagram A, B<br>
+		and the intersected area is A U B</p>
+	</div>
+	</form>
+</body>
+<script type="text/javascript">
+function find()
+{
+b1=document.getElementById('box1').value;
+a=b1.split(" ");
+b2=document.getElementById('box2').value;
+b=b2.split(" ");
+const setA=new Set(a);
+const setB=new Set(b);
+let unionset=new Set(a);
+for(let i of setB)
+{
+	unionset.add(i);
+}
+var arr=Array.from(unionset);
+document.getElementById('box3').value=Array.from(unionset);
+var i;
+var text=""
+for(i=0;i<arr.length;i++)
+{
+text+="<p>"+arr[i]+"</p>";
+}
+document.getElementById('c1').innerHTML=text;
+}
+</script>;
+
+
+</script>
+</html>

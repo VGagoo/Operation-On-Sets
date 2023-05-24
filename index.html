@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Operation on sets</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		
+		i.display{
+			opacity: 0;
+		}
+		li.guess:hover i.display
+		{
+			color: green;
+			opacity: 1;
+			transition-property: opacity;
+			transition-duration: 2s;
+		}
+	</style>
+</head>
+<body>
+	<?php include 'header.php';?>
+
+	<h1 class="mainhead">Operations on Sets</h1>
+	<div class="headerbar">
+		<a class="headerbar" href="index.html" style="background: #fff;text-decoration: underline;N">Introduction</a>|
+		<a class="headerbar" href="union.html">Union</a>|
+		<a class="headerbar" href="intersection.html">Intersection</a>|
+		<a class="headerbar" href="Difference.html">Difference</a>|
+		<a class="headerbar" href="complement.html">Complement</a>|
+		<a class="headerbar" href="principle.html">Principle of Inclusion and Exclusion</a>
+	</div>
+	<div class="mainarea">
+		<h1 class="subhead">What is a set?</h1>
+		<div class="container">
+			<div class="flexitem" style="align-content: flex-start;flex-grow:2">
+				<p>
+					A <em class="highlight">set</em> is a well defined collection of distinct objects, called
+					elements or members of the set. A set can be represented in two forms. They are
+					<ol>
+						<a href="#target1" style="text-decoration: none;"><li class="highlight">Roster/Tabular form</li></a>
+						<a href="#target2" style="text-decoration:none;"><li class="highlight">Rule/Set builder form</li></a>
+					</ol>
+				</p>
+			</div>
+			<div class="flexitem" style="flex-grow:1">
+				<img src="sets.jpg" width="400px" height="300px">
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="flexitem" style="flex-grow:1;align-self: center;">
+				<img src="numbers.png" width="400px" height="300px">	
+			</div>
+			<div class="flexitem"><a name="target1"></a>
+				<h1 class="subhead">What is Roaster and Rule method?</h1>
+				<ul style="list-style:none;"><a name="target2"></a>
+					<li>In <b class="highlight">Roster method</b>, elements of the set are listed within the pair of brackets { } and are separated by commas.</li><i><b>Eg: R={2,4,6,8,10,12,14}</b></i>
+					<br><br>
+					<li>In <b class="highlight">Rule method</b>, Set is represented by using
+						statements depicting the
+					relation among its elements.</li><i><b>Eg: S={x|x is an even number and
+						x<15}</b></i>
+						</ul>
+					</div>
+
+				</div>
+
+
+				<div class="container">
+
+					<div class="flexitem" style="align-content: flex-start;flex-grow:2">
+						<h1 class="subhead">Take a guess</h1>
+						<ul style="list-style: none;">
+							<li class="guess">M = {x | x is a positive integer less than 12} - <i class="display" style="font-size: 20px;">Rule method</i></li>
+
+							<li class="guess">A = {a,e,i,o,u} - <i class="display" style="font-size: 20px;">Roaster method</i></li>
+
+							<li class="guess">T = {x : x is natural number and 2 ≤ x < 7} - <i class="display" style="font-size: 20px;">Rule method</i></li>
+
+							<li class="guess">H = {the set of all letters in the word BETTER}
+								- <i class="display" style="font-size: 20px;">Rule method</i></li>
+
+								<li class="guess">S = {0,1,2,3,5,8,13} - <i class="display" style="font-size: 20px;">Roaster method</i></li>
+							</ul>
+						</div>
+					</div>
+
+
+
+					<div class="container">	
+						<div class="flexitem" style="align-content: flex-start;flex-grow:2">
+							<h1 class="subhead">The four basic operations on sets are:</h1>
+							<ol class="highlight" style="margin: 50px;">
+								<a href="union.html" style="text-decoration: none;"><li>Union of sets</li></a>
+								<a href="intersection.html" style="text-decoration: none;" ><li>Intersection of sets</li></a>
+								<a href="difference.html" style="text-decoration: none;"><li>Set Difference</li></a>
+								<a href="complement.html" style="text-decoration: none;"><li>Complement of set</li></a>
+
+							</ol><p>
+								In this tutorial we will be using Venn Diagrams to demonstrate the operations on sets
+							</p></div>			
+						</div>
+
+						<div class="container">	
+							<div class="flexitem" style="align-content: flex-start;flex-grow:2">
+								<h1 class="subhead">What is a venn diagram?</h1><p>
+									A <i class="highlight">Venn diagram</i> is an illustration that uses circles to show the relationships among things or finite groups of things. Circles that overlap have a commonality while circles that do not overlap do not share those traits.</p>
+								</div>		
+								<div class="flexitem" style="align-content: flex-start;flex-grow:1">
+									<img src="venn.jpg" width="400px" height="300px">
+								</div>		
+							</div>
+
+
+						</div>
+					</body>
+					</html>
